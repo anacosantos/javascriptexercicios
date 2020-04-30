@@ -34,7 +34,7 @@ var familia = {
               sexo : 3
             },
             {
-              nome : "maria",
+              nome : "maria neta",
               sexo : 5
             }
           ]
@@ -65,7 +65,11 @@ var familia = {
  familia.pais.filhos.forEach(function(t){
      // console.log(t.nomefilho);
       if(t.nomefilho === "maria"){
-          t.netos.push("JJ")
+        var novoFilho = {
+          nome : "joazinho junior",
+          sexo : 3
+        }
+          t.netos.push(novoFilho)
           //console.log(t)
         }
 });

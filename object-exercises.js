@@ -8,38 +8,46 @@
 //para cada pais deve ter os filhos: nomefilho, idadefilho, sexofilho, netos
 //para cada neto deve ter o nome e sexo.
 //seu programa deve imprimir o objeto inteiro. 
+//adicionar id para cada objeto.
 
 var familia = {
+    id: 12212,
     nome: "Santos",
     brasao: "abc",
     nomeAvo: "Celetino",
     nomeAvo: "Dulce",
     pais : {
       pai : {
+        id: 01,
         nome: "Luis",
         idade: 51,
       },
       mae : {
+        id : 02,
         nome: "Elisabeth",
         idade: 69,
       },
       filhos : [
         {
+          id: 03,
           nomefilho : "joao",
           idadefilho : 13,
           sexofilho : "m",
           netos :[
             {
+              id : 04,
               nome : "joazinho junior",
               sexo : 3
             },
             {
+              id : 05,
               nome : "maria neta",
               sexo : 5
             }
           ]
         },
         {
+          id :06,
           nomefilho : "maria",
           idadefilho : 29,
           sexofilho : "f",
@@ -64,8 +72,9 @@ var familia = {
  
  familia.pais.filhos.forEach(function(t){
      // console.log(t.nomefilho);
-      if(t.nomefilho === "maria"){
+      if(t.id === 06){
         var novoFilho = {
+          id : 07,
           nome : "joazinho junior",
           sexo : 3
         }
@@ -74,3 +83,4 @@ var familia = {
         }
 });
 console.log(familia.pais.filhos[1].netos);
+
